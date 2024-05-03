@@ -1,7 +1,9 @@
 <?php 
  var_dump($_GET);
  $message_content = $_GET['message'];
- $censored_word = $_GET['censorship']
+ $message_content_length = strlen($message_content);
+
+ $censored_word = $_GET['censorship'];
 ?>
 
 
@@ -20,6 +22,11 @@
         font-size: 24px;
     }
 
+    .original-message-length{
+        font-weight: bold;
+        font-size: 18px;
+    }
+
 
 </style>
 
@@ -28,6 +35,10 @@
 <p class="message-content">
    <?php echo $message_content ?>
 </p>
+<p>
+    Lunghezza Nessaggio: <span class="original-message-length"> <?php echo $message_content_length ?> </span>  caratteri.
+</p>
+
 
 <p>
     <?php echo $censored_word ?>
