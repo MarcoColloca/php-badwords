@@ -1,10 +1,10 @@
 <?php 
- var_dump($_GET);
+ //var_dump($_GET);
  $message_content = $_GET['message'];
  $message_content_length = strlen($message_content);
 
  $censored_word = $_GET['censorship'];
- $censored_message = str_replace($censored_word, '***', $message_content);
+ $censored_message = str_ireplace($censored_word, '***', $message_content, $censored_words);
  $censored_message_length = strlen($censored_message);
 ?>
 
@@ -49,4 +49,7 @@
 </p>
 <p>
     Lunghezza Nessaggio: <span class="original-message-length"> <?php echo $censored_message_length ?> </span>  caratteri.
+</p>
+<p>
+    Parole censurate: <?php echo $censored_words ?>
 </p>
