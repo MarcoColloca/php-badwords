@@ -73,7 +73,7 @@
                     <label for="censorship">Quale parola vuoi censurare?</label>
 
 
-                    <input type="text" name="censorship" id="censorship" placeholder="Inserisci la parola">
+                    <input type="text" name="censorship" id="censorship" required placeholder="Inserisci la parola">
                 </div>
 
 
