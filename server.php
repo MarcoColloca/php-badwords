@@ -1,6 +1,7 @@
 <?php 
- //var_dump($_GET);
+ var_dump($_GET);
  $message_content = $_GET['message'];
+ $censored_word = $_GET['censorship']
 ?>
 
 
@@ -26,4 +27,8 @@
 
 <p class="message-content">
    <?php echo $message_content ?>
+</p>
+
+<p>
+    <?php echo $censored_word ?>
 </p>
