@@ -1,7 +1,29 @@
 <?php 
-var_dump($_GET)
-
+ //var_dump($_GET);
+ $message_content = $_GET['message'];
 ?>
 
 
-<h1>OHHH!</h1>
+
+<style> 
+    body{
+        padding: 100px 50px;
+    }
+
+    h1{
+        font-size: 32px;
+        color: rgb(125, 0, 0);
+    }
+
+    .message-content{
+        font-size: 24px;
+    }
+
+
+</style>
+
+<h1>Messaggio Ricevuto</h1>
+
+<p class="message-content">
+   <?php echo $message_content ?>
+</p>
