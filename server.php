@@ -4,6 +4,8 @@
  $message_content_length = strlen($message_content);
 
  $censored_word = $_GET['censorship'];
+ $censored_message = str_replace($censored_word, '***', $message_content);
+ $censored_message_length = strlen($censored_message);
 ?>
 
 
@@ -13,7 +15,7 @@
         padding: 100px 50px;
     }
 
-    h1{
+    h2{
         font-size: 32px;
         color: rgb(125, 0, 0);
     }
@@ -30,7 +32,7 @@
 
 </style>
 
-<h1>Messaggio Ricevuto</h1>
+<h2>Messaggio Ricevuto</h2>
 
 <p class="message-content">
    <?php echo $message_content ?>
@@ -40,6 +42,11 @@
 </p>
 
 
+
+<h2>Messaggio Censurato</h2>
+<p class="message-content">
+   <?php echo $censored_message ?>
+</p>
 <p>
-    <?php echo $censored_word ?>
+    Lunghezza Nessaggio: <span class="original-message-length"> <?php echo $censored_message_length ?> </span>  caratteri.
 </p>
