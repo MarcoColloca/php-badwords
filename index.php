@@ -44,10 +44,10 @@
         padding: 100px 0;
     }
 
-    .main-content__form--message{
+    .main-content__form--message,
+    .main-content__form--censorship{
         margin-bottom: 20px;
     }
-
 
 </style>
 
@@ -69,6 +69,14 @@
                 </div>
                 
                 
+                <div class="main-content__form--censorship">
+                    <label for="censorship">Quale parola vuoi censurare?</label>
+
+
+                    <input type="text" name="censorship" id="censorship" placeholder="Inserisci la parola">
+                </div>
+
+
                 <div class="button-container">
                     <button>Invia!</button>
                 </div>
